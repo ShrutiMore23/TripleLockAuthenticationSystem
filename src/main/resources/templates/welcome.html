@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TripleLock Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f4f9fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .card {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .left {
+      background-color: #e9f7fe;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px dashed #cce7f0;
+    }
+
+    .right {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px 0;
+      transition: background 0.3s;
+    }
+
+    .btn-login {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    .btn-login:hover {
+      background-color: #005fa3;
+    }
+
+    .btn-register {
+      background-color: #00b894;
+      color: white;
+    }
+
+    .btn-register:hover {
+      background-color: #009b7b;
+    }
+
+    .right h3 {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      padding: 10px 20px;
+      background-color: #f1f3f5;
+      border-radius: 15px;
+      width: fit-content;
+      cursor: pointer;
+      margin: 5px 0;
+      transition: background-color 0.2s;
+    }
+
+    .option:hover {
+      background-color: #dfe6e9;
+    }
+
+    hr {
+      margin: 10px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+      width: 80%;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        border-radius: 10px;
+      }
+
+      .card {
+        border-right: none;
+        border-bottom: 2px dashed #cce7f0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Card -->
+  <div class="card left">
+    <h2>Welcome!</h2>
+    <button class="btn-login" onclick="alert('Login clicked')">Login</button>
+    <button class="btn-register" onclick="alert('Register clicked')">Register</button>
+  </div>
+
+  <!-- Right Card -->
+  <div class="card right">
+	
+    <h2><u>Want a secure way?</u><br>Use <strong>GraphiSecure: A TripleLock Authentication System</strong></h2>
+    <div class="option" onclick="alert('Click Ok to Create Account')"><a style="text-decoration: none;" th:href="@{/register}">Create Account using TripleLock</a></div>
+    <hr>
+	<div class="note">Already have an account?</div>
+    <div class="option" onclick="alert('Click Ok to Login')"><a style="text-decoration: none;" th:href="@{/login}">Login to your Account</a></div>
+    
+  </div>
+</div>
+
+<script>
+  // Optional future JS logic here
+</script>
+
+</body>
+</html>

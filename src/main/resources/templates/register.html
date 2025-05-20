@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphical Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* All styles same as your new design */
+    * {
+      box-sizing: border-box;
+    }
+	.crimson-text-semibold {
+	  font-family: "Crimson Text", serif;
+	  font-weight: 600;
+	  font-style: normal;
+	}
+
+
+    body {
+      margin: 0;
+  
+      background-color: #f5f5f7;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+	 
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .circle {
+      width: 35vw;
+      height: 35vw;
+      max-width: 460px;
+      max-height: 460px;
+      border-radius: 50%;
+      background: linear-gradient(145deg,#f7c15c, #c2aa69);
+      box-shadow: 0 45px 80px rgba(0, 0, 0, 0.1), 0 85px 60px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      padding: 20px;
+      color: #fff;
+      margin: 20px;
+    }
+
+    .form-section {
+      max-width: 600px;
+      padding: 20px;
+	  margin-left: 40px;
+    }
+
+    .form-section input[type="text"],
+    .form-section input[type="password"],
+	.form-section input[type="email"]
+	 {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #dcdfe1;
+      border-radius: 10px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+	input[type="text"], input[type="password"], input[type="email"] {
+			      border-color: #4caf50;
+			      box-shadow: 0 0 10px rgba(76, 175, 80, 0.4);
+			    }
+
+    .form-section button {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background-color: #e67e22;
+    }
+
+    .color-box {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+	  opacity:80% ;
+    }
+	
+	.color-box:hover {
+		
+		box-shadow: rgb(64, 0, 64);
+		border-radius: 15px;
+		border-color: chocolate;
+		opacity:100%
+		
+	}
+	
+    .red { background-color: #ff4d4d; }
+    .green { background-color: #5cd65c; }
+    .blue { background-color: #4da6ff; }
+
+    .draggable-img {
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+      cursor: grab;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .drop-cell {
+      width: 80px;
+      height: 80px;
+      border: 2px dashed #bbb;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+	.drop-cell:hover {
+	      background-color: #f1f1f1;
+	    }
+		
+		.tip-box {
+			background-color: #e0f7fa;
+				  color: #006064;
+				  padding: 14px 20px;
+				  border-left: 5px solid #00acc1;
+				  border-radius: 4px;
+				  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				  font-size: 15px;
+				  margin: 15px 0;
+		}
+		
+		
+		/* For heading Box*/
+		.fancy-heading {
+		    text-align: center;
+		    margin-top: 50px;
+		    animation: fadeInDrop 1.2s ease-out;
+		}
+
+		.fancy-heading h1 {
+		    font-size: 42px;
+		    font-weight: 700;
+		    font-family: 'Segoe UI', sans-serif;
+		    background: linear-gradient(90deg, #4b6cb7, #182848);
+		    -webkit-background-clip: text;
+		    -webkit-text-fill-color: transparent;
+		    letter-spacing: 1.5px;
+		    position: relative;
+		}
+
+		.fancy-heading h1::after {
+		    content: '';
+		    position: absolute;
+		    left: 50%;
+		    bottom: -8px;
+		    transform: translateX(-50%);
+		    width: 60%;
+		    height: 4px;
+		    border-radius: 50px;
+		    background: linear-gradient(to right, #6dd5ed, #2193b0);
+		    animation: underlineGrow 1s ease-out 0.8s forwards;
+		    opacity: 0;
+		}
+
+		@keyframes fadeInDrop {
+		    from {
+		        opacity: 0;
+		        transform: translateY(-25px);
+		    }
+		    to {
+		        opacity: 1;
+		        transform: translateY(0);
+		    }
+		}
+
+		@keyframes underlineGrow {
+		    0% {
+		        width: 0;
+		        opacity: 0;
+		    }
+		    100% {
+		        width: 60%;
+		        opacity: 1;
+		    }
+		}
+
+
+		
+		
+		
+  </style>
+</head>
+<body>
+	
+	
+	  
+	
+
+<div class="wrapper">
+	<!--Header-->
+	<div class="fancy-heading">
+	    <h1>Register Yourself</h1>
+	</div>
+
+	
+	
+  <form th:action="@{/register}" method="post" th:object="${user}">
+	
+	<!--Alert-->
+	<div class="tip-box" >
+	 🔐 <strong>Note:</strong> Create a unique username and a strong password. This is the first step in securing your account.
+	</div>
+	
+	<div th:if="${message}" style="margin: 20px; padding: 15px; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 5px;">
+	  ⚠️ <p  class="message"  th:text="${message}"> <a href="/login" style="color: #721c24; text-decoration: underline;">Login</a>.</p>
+	</div>
+
+	
+
+    <!-- Step 1: Username and Password -->
+    <div class="section">
+      <div class="circle">Create Username<br>and Password 
+		</div>
+      <div class="form-section">
+        <input type="text" th:field="*{username}" placeholder="Enter username" required />
+        <input type="password" id="pass" th:field="*{pwd1}" placeholder="Enter Password " required />
+		<input type="email" th:field="*{email}" placeholder="Enter email" required />
+      </div>
+    </div>
+
+	<div class="tip-box">
+	  🎨 <strong>Tip:</strong> Select a unique color pattern by clicking the colored blocks in your preferred order. Remember this pattern for future logins.
+	</div>
+
+    <!-- Step 2: Color Pattern -->
+    <div class="section">
+      <div class="form-section">
+        <h3>Select Your Color Pattern</h3>
+        <div class="color-box red" onclick="addToPassword('red')"></div>
+        <div class="color-box green" onclick="addToPassword('green')"></div>
+        <div class="color-box blue" onclick="addToPassword('blue')"></div>
+        <br />
+        <label>Your Pattern:</label>
+        <input type="password" id="display" readonly  />
+        <input type="hidden" id="realPassword" th:field="*{pwd2}" />
+		
+		
+      </div>
+      <div class="circle">Generate<br>Color Pattern</div>
+    </div>
+
+    <!-- Step 3: Image Pattern -->
+	<div class="tip-box">
+	  🧩 <strong>Tip:</strong> Drag and arrange the images in a specific sequence. This pattern will be used to verify your identity during login.
+	</div>
+
+    <div class="section">
+      <div class="circle">Generate<br>Image Pattern</div>
+	  
+      <div class="form-section">
+        <h3>Image Pattern</h3>
+        <div class="image-container">
+			
+					  
+          <img src="/android.png" id="img1" class="draggable-img" draggable="true" data-code="dchbo0ed5wvs" />
+          <img src="/java.png" id="img2" class="draggable-img" draggable="true" data-code="6sb3r28efehbcn3d9aq" />
+          <img src="/javascript.png" id="img3" class="draggable-img" draggable="true" data-code="d3esb2wv2wb" />
+          <img src="/python.png" id="img4" class="draggable-img" draggable="true" data-code="1xxe2je0cbs" />
+        </div>
+        <div class="grid">
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="drop-cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        <label>Your Image Pattern Password:</label>
+        <input type="password" id="visiblePassword" readonly />
+        <input type="hidden" id="actualPassword" th:field="*{pwd3}" />
+		
+		</br><br>
+		
+        <button type="submit">Register</button>
+      </div>
+	  
+
+    </div>
+  </form>
+  <div style="text-align:center; margin: 20px;">
+    
+	<button style="
+	  background: linear-gradient(135deg, #f6f8fa, #e0e0e0);
+	  color: #2c3e50;
+	  border: none;
+	  padding: 10px 25px;
+	  border-radius: 25px;
+	  font-size: 16px;
+	  font-family: 'Segoe UI', sans-serif;
+	  cursor: pointer;
+	  box-shadow: 2px 2px 8px rgba(0,0,0,0.12);
+	  transition: all 0.3s ease;
+	  display: inline-flex;
+	  align-items: center;
+	  gap: 8px;
+	"
+	onmouseover="this.style.background='linear-gradient(135deg, #e8eaec, #d5d5d5)'; this.style.transform='translateY(-1px)'"
+	onmouseout="this.style.background='linear-gradient(135deg, #f6f8fa, #e0e0e0)'; this.style.transform='translateY(0)'">
+	  <span style="font-size: 18px;">&#8592;</span> <a style="text-decoration: none;" th:href="@{/}">Back</a>
+	</button>
+	
+	<br><br>
+
+  </div>
+</div>
+
+<script>
+  const colorMap = {
+    red: '73mdv',
+    green: 'je3r8',
+    blue: '2hbcq'
+  };
+
+  function addToPassword(color) {
+    const hiddenInput = document.getElementById('realPassword');
+    const displayInput = document.getElementById('display');
+    hiddenInput.value += colorMap[color];
+    displayInput.value += '•'.repeat(colorMap[color].length);
+  }
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  document.querySelectorAll('.draggable-img').forEach(img => {
+    img.addEventListener('dragstart', function (ev) {
+      ev.dataTransfer.setData("text/plain", ev.target.id);
+    });
+  });
+
+  function drop(ev) {
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text/plain");
+    const draggedImg = document.getElementById(data);
+    const imgClone = draggedImg.cloneNode(true);
+    imgClone.setAttribute("draggable", "false");
+    ev.target.innerHTML = "";
+    ev.target.appendChild(imgClone);
+    const code = draggedImg.getAttribute('data-code');
+    document.getElementById('actualPassword').value += code;
+    document.getElementById('visiblePassword').value += '•'.repeat(code.length);
+  }
+  
+  document.querySelector('form').addEventListener('submit', function(e) {
+      const pwd3 = document.getElementById('actualPassword').value;
+      if (!pwd3 || pwd3.length < 10) {
+        alert("Please complete the image pattern step.");
+        e.preventDefault(); // Prevent submission
+      }
+    });
+	
+	document.querySelector('form').addEventListener('submit', function(e) {
+	      const pwd2 = document.getElementById('realPassword').value;
+	      if (!pwd2 || pwd2.length < 4) {
+	        alert("Please complete the color pattern step.");
+	        e.preventDefault(); // Prevent submission
+	      }
+	    });
+  
+	document.querySelector('form').addEventListener('submit', function(e) {
+					   const pwd1 = document.getElementById('pass').value;
+					   if ( pwd1.length < 6) {
+					     alert("Please lengten your password , at least 6 characters expected");
+					     e.preventDefault(); // Prevent submission
+					   }
+					 });
+		
+						 
+					 
+					 			
+  
+</script>
+</body>
+</html>
