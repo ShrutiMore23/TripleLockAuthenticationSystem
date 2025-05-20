@@ -74,7 +74,7 @@ Finally, users **drag and drop images into a specific order** they set during re
 - Ensures password integrity while preserving user account safety.
 
 <p align="center">
-  <img src="./assets/forgot_password.gif" alt="Forgot Password Demo" width="500"/>
+  <img src="./assets/forgot_pwd.gif" alt="Forgot Password Demo" width="500"/>
 </p>
 
 
