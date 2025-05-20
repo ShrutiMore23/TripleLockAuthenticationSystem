@@ -33,15 +33,39 @@ A secure **three-level authentication system** developed using **Spring Boot**, 
 
 ## ⚙️ Project Implementation and Working
 
-### Overview
+### 🔍 Overview
 
-The **Triple Lock Authentication System** uses a multi-factor authentication approach by combining:
+The **Triple Lock Authentication System** enhances login security using **three distinct verification layers**. Each step is carefully designed to ensure both usability and protection against unauthorized access.
 
-- **Simple Password Authentication** — Traditional username and password login.
-   ![Simple Password Demo](./assets/simple_password.png)
+---
 
-- **Color Pattern Selection** — Users select a sequence of colors as a second factor.  
-![Color Pattern Demo](./assets/color_pattern.gif)
+### 🔐 1. Simple Password Authentication  
+Users begin with a **traditional login** using a secure username and password. This is the **first layer of authentication**.
 
-- **Image Pattern Drag-and-Drop Verification** — Users verify identity by dragging and dropping images in a specific order.
-  ![Image Pattern Demo](./assets/image_pattern.gif)
+✅ *Tech Used:* Spring Boot | Thymeleaf | Hibernate  
+<p align="center">
+  <img src="./assets/simple_password.png" alt="Simple Password Demo" width="500"/>
+</p>
+
+---
+
+### 🎨 2. Color Pattern Selection  
+In the second step, users **select a predefined color sequence**. This layer adds a **visual memory-based authentication** element, strengthening security.
+
+✅ *Tech Used:* HTML | CSS | JavaScript  
+<p align="center">
+  <img src="./assets/color_pattern.gif" alt="Color Pattern Demo" width="500"/>
+</p>
+
+---
+
+### 🧩 3. Image Pattern Drag-and-Drop  
+Finally, users **drag and drop images into a specific order** they set during registration. This introduces an **interactive, image-based security** step.
+
+✅ *Tech Used:* JavaScript (Drag & Drop) | Thymeleaf | Spring Boot  
+<p align="center">
+  <img src="./assets/image_pattern.gif" alt="Image Pattern Demo" width="500"/>
+</p>
+
+---
+
