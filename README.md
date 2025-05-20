@@ -66,3 +66,37 @@ Finally, users **drag and drop images into a specific order** they set during re
 
 ---
 
+---
+
+### 🧠 What I Learned
+
+- ✅ Implemented secure **multi-step authentication** using Spring Boot  
+- ✅ Gained experience in **Thymeleaf templating** for dynamic UI rendering  
+- ✅ Improved knowledge of **Hibernate & JPA** for ORM and data persistence  
+- ✅ Practiced integrating **drag-and-drop** logic and **custom patterns**  
+- ✅ Enhanced understanding of **web security fundamentals**
+
+---
+
+### 🔮 Future Scope
+
+- 🚀 Add **OTP (One-Time Password)** as an optional 4th layer of authentication  
+- 🧠 Implement **AI-based anomaly detection** for login attempts  
+- 🔐 Enable **image encryption** for enhanced pattern security  
+- ☁️ **Deploy on cloud platforms** like **AWS**, **Render**, or **Heroku**  
+- 📱 Create a **mobile-responsive** version using **React Native** or **Flutter**
+
+---
+
+### 📬 Contact Me
+
+💬 *Have feedback, suggestions, or want to collaborate? Feel free to reach out!*
+
+<p align="left">
+  <a href="mailto:moreshruti382@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+  </a>
+  <a href="https://www.linkedin.com/in/shruti-more23" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>
