@@ -41,8 +41,7 @@ The **Triple Lock Authentication System** uses a multi-factor authentication app
    ![Simple Password Demo]()
 
 - **Color Pattern Selection** — Users select a sequence of colors as a second factor.  
-  ![Color Pattern Demo]("./assets/color_pattern.gif")
-
+![Color Pattern Demo](./assets/color_pattern.gif)
 
 - **Image Pattern Drag-and-Drop Verification** — Users verify identity by dragging and dropping images in a specific order.
   ![Image Pattern Demo]()
