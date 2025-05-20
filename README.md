@@ -30,3 +30,16 @@ A secure **three-level authentication system** developed using **Spring Boot**, 
 | IDE             | IntelliJ IDEA / Eclipse                |
 
 ---
+
+## ⚙️ Project Implementation and Working
+
+### Overview
+
+The **Triple Lock Authentication System** uses a multi-factor authentication approach by combining:
+
+- **Simple Password Authentication** — Traditional username and password login.
+
+- **Color Pattern Selection** — Users select a sequence of colors as a second factor.
+
+- **Image Pattern Drag-and-Drop Verification** — Users verify identity by dragging and dropping images in a specific order.
+
