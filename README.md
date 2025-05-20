@@ -1,0 +1,32 @@
+# 🔐 Triple Lock Authentication System
+
+A secure **three-level authentication system** developed using **Spring Boot**, **Hibernate**, and **MySQL**, designed to enhance cybersecurity by implementing:
+
+1. **Simple Password Authentication**
+2. **Color Pattern Selection**
+3. **Image Pattern Drag-and-Drop Verification**
+
+---
+
+## 🚀 Features
+
+- 🔒 Three-step authentication for login and registration
+- 🧠 Secure storage of user credentials using Hibernate (JPA)
+- 💾 MySQL database integration for persistent data storage
+- ⚙️ RESTful APIs for backend processing
+- 🎨 Clean and responsive frontend (Thymeleaf or HTML/CSS/JS)
+
+---
+
+## 🛠️ Tech Stack
+
+| Category        | Technology                             |
+|-----------------|----------------------------------------|
+| Backend         | Spring Boot, Java                      |
+| ORM             | Hibernate (JPA)                        |
+| Database        | MySQL                                  |
+| Frontend        | HTML, CSS, JavaScript, Thymeleaf       |
+| Build Tool      | Maven                                  |
+| IDE             | IntelliJ IDEA / Eclipse                |
+
+---
