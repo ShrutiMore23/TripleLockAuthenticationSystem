@@ -68,6 +68,18 @@ Finally, users **drag and drop images into a specific order** they set during re
 
 ---
 
+### 🔁 Forgot Password Flow
+
+- Allows users to securely reset their password through a verification process.  
+- Ensures password integrity while preserving user account safety.
+
+<p align="center">
+  <img src="./assets/forgot_password.gif" alt="Forgot Password Demo" width="500"/>
+</p>
+
+
+---
+
 ### 🧠 What I Learned
 
 - ✅ Implemented secure **multi-step authentication** using Spring Boot  
