@@ -66,8 +66,6 @@ Finally, users **drag and drop images into a specific order** they set during re
 
 ---
 
----
-
 ### 🔁 Forgot Password Flow
 
 - Allows users to securely reset their password through a verification process.  
