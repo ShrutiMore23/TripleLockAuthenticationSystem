@@ -109,7 +109,7 @@ Finally, users **drag and drop images into a specific order** they set during re
   <a href="https://www.linkedin.com/in/shruti-more23" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-   <a href="https://shruti-more-portfolio.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
+   <a href="https://shruti-more-portfolio.netlify.app">
+     <img src="https://img.shields.io/badge/Portfolio-Visit%20Now-blueviolet?style=for-the-badge&logo=firefox-browser"/>
+   </a>
 </p>
