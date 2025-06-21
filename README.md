@@ -30,7 +30,7 @@ A secure **three-level authentication system** developed using **Spring Boot**, 
 | Database        | MySQL                                  |
 | Frontend        | HTML, CSS, JavaScript, Thymeleaf       |
 | Build Tool      | Maven                                  |
-| IDE             | IntelliJ IDEA / Eclipse                |
+| IDE used        | STS IDE                                |
 
 ---
 
