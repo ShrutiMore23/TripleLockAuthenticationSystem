@@ -28,7 +28,7 @@ A secure **three-level authentication system** developed using **Spring Boot**, 
 | Backend         | Spring Boot, Java                      |
 | ORM             | Hibernate (JPA)                        |
 | Database        | MySQL                                  |
-| Frontend        | HTML, CSS, JavaScript, Thymeleaf       |
+| Frontend        | HTML5, CSS3, JavaScript, Thymeleaf     |
 | Build Tool      | Maven                                  |
 | IDE used        | STS IDE                                |
 
