@@ -5,6 +5,9 @@ A secure **three-level authentication system** developed using **Spring Boot**, 
 1. **Simple Password Authentication**
 2. **Color Pattern Selection**
 3. **Image Pattern Drag-and-Drop Verification**
+<p align="center">
+  <img src="./_-visual selection.png" alt="flow diagram" width="500"/>
+</p>
 
 ---
 
